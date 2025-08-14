@@ -1,3 +1,5 @@
+import random
+
 def play_game():
     print("Welcome to Rock Paper Scissor!")
     variant = input("Choose your game (classis or extended): ").lower().strip()
@@ -12,6 +14,10 @@ def play_game():
         choices = classic_choices
 
     print(f"You selected {variant} mode. Choices are: {', '.join(choices)}")
+
+    # Computer makes a choice randomly from the list
+    computer_choice = random.choice(choices)
+    print(f"Computer has made its choice!")
 
 
 
